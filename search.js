@@ -35,9 +35,9 @@ window.addEventListener('resize', () => {
   const inputRect = searchBar.getBoundingClientRect();
   const div = document.querySelector('#search-results')
   if(div){
-      div.style.width = `${inputRect.width}px`;
-      div.style.left = `${inputRect.left}px`;
-      div.style.top = `${inputRect.bottom + 5}px`;
+      div.style.width = inputRect.width + "px";
+      div.style.left = inputRect.left + "px";
+      div.style.top = (inputRect.bottom + 5) + "px";
   }
 });
 
