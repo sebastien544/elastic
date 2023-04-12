@@ -184,7 +184,7 @@ function displayResults(results) {
   resultList.innerHTML = '';
 
   const inputRect = document.querySelector('form').getBoundingClientRect();
-  resultList.style.width = `${inputRect.width}px`;
+  resultList.style.width = `${inputRect.width - 8}px`;
   resultList.style.left = `${inputRect.left}px`;
   resultList.style.top = `${inputRect.bottom + 10}px`;
   resultList.style.zIndex= '9999';
