@@ -183,7 +183,7 @@ function displayResults(results) {
   resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: absolute;";
   resultList.innerHTML = '';
 
-  const inputRect = searchBar.getBoundingClientRect();
+  const inputRect = document.querySelector('form').getBoundingClientRect();
   resultList.style.width = `${inputRect.width}px`;
   resultList.style.left = `${inputRect.left}px`;
   resultList.style.top = `${inputRect.bottom + 10}px`;
