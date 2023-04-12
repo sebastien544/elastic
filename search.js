@@ -180,7 +180,7 @@ function displayResults(results) {
     document.querySelector('body').appendChild(resultList);
   }
   
-  resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: absolute;";
+  resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: relative;";
   resultList.innerHTML = '';
 
   const inputRect = document.querySelector('form').getBoundingClientRect();
