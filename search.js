@@ -184,7 +184,7 @@ function displayResults(results) {
   resultList.innerHTML = '';
 
   const inputRect = document.querySelector('form');
-  resultList.style.width = (inputRect.width - 20) + "px";
+  resultList.style.width = inputRect.offsetWidth + "px";
   resultList.style.left = inputRect.offsetLeft + 'px';
   resultList.style.top = inputRect.offsetTop + inputRect.offsetHeight + 'px';
   resultList.style.zIndex= '9999';
