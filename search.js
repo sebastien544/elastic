@@ -183,11 +183,10 @@ function displayResults(results) {
   resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: relative;";
   resultList.innerHTML = '';
 
-  const inputRect = document.querySelector('form').getBoundingClientRect();
+  const inputRect = document.querySelector('form');
   resultList.style.width = (inputRect.width - 20) + "px";
-  console.log(inputRect.left);
-  resultList.style.left = inputRect.left + "px";
-  resultList.style.top = (inputRect.bottom + 10) + "px";
+  resultList.style.left = inputRect.offsetLeft + 'px';
+  resultList.style.top = inputRect.offsetTop + inputRect.offsetHeight + 'px';
   resultList.style.zIndex= '9999';
   resultList.style.background = 'white';
 
