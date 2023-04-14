@@ -185,8 +185,8 @@ function displayResults(results) {
 
   const inputRect = document.querySelector('form');
   resultList.style.width = inputRect.offsetWidth + "px";
-  resultList.style.left = inputRect.offsetLeft + 'px';
-  resultList.style.top = inputRect.offsetTop + inputRect.offsetHeight + 'px';
+  resultList.style.left = inputRect.getBoundingClientRect().left + 'px';
+  resultList.style.top = (inputRect.getBoundingClientRect().bottom + 10) + 'px';
   resultList.style.zIndex= '9999';
   resultList.style.background = 'white';
 
