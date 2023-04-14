@@ -177,11 +177,11 @@ function displayResults(results) {
   if (!resultList) {
     resultList = document.createElement('div');
     resultList.id = 'search-results';
-    document.querySelector('body').appendChild(resultList);
-  }
+   
+ 
   
   resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: absolute;";
-  resultList.innerHTML = '';
+  
 
   const inputRect = document.querySelector('form');
   resultList.style.width = inputRect.offsetWidth + "px";
@@ -189,6 +189,10 @@ function displayResults(results) {
   resultList.style.top = (inputRect.getBoundingClientRect().bottom + 10) + 'px';
   resultList.style.zIndex= '9999';
   resultList.style.background = 'white';
+  document.querySelector('body').appendChild(resultList);
+  }
+  
+  resultList.innerHTML = '';
 
   results.forEach((result, index) => {
       const resultElement = document.createElement('a');
