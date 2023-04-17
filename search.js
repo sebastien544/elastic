@@ -183,7 +183,6 @@ function displayResults(results) {
   resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; ";
   resultList.style.background = 'white';
   
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
  if (mediaQuery.matches) {
    document.querySelector('#elastic-search').appendChild(resultList);
  } else {
