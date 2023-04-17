@@ -189,7 +189,7 @@ function displayResults(results) {
   resultList.style.width = inputRect.offsetWidth + "px";
   resultList.style.left = inputRect.getBoundingClientRect().left + 'px';
   resultList.style.top = (inputRect.getBoundingClientRect().bottom + 10) + 'px';
-  resultList.style.zIndex= '9999';
+  
   resultList.style.background = 'white';
   document.querySelector('body').appendChild(resultList);
   }
