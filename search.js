@@ -181,17 +181,21 @@ function displayResults(results) {
  
   
   resultList.style.cssText = "box-shadow: 0 0 0 1px rgb(35 38 59 / 10%), 0 6px 16px -4px rgb(35 38 59 / 15%); border-radius: 4px; padding: 8px;background: #fff; position: absolute;";
+  resultList.style.background = 'white';
   
-  resultList.style.left = 0;
-  resultList.style.right = 0;
-
-  const inputRect = document.querySelector('form');
+ if (window.matchMedia("(max-width: 768px)")){
+   document.querySelector('#elastic-search').appendChild(resultList);
+ } else {
+   const inputRect = document.querySelector('form');
   resultList.style.width = inputRect.offsetWidth + "px";
   resultList.style.left = inputRect.getBoundingClientRect().left + 'px';
   resultList.style.top = (inputRect.getBoundingClientRect().bottom + 10) + 'px';
   
-  resultList.style.background = 'white';
+ 
   document.querySelector('body').appendChild(resultList);
+ }
+
+  
   }
   
   resultList.innerHTML = '';
